@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block contents %}
+
+<div style="text-align:center">
+    <br>
+
+    <h4>To enter, Please do login!!</h4>
+    <br>
+
+    <b><span style="color:brown">{{messagess}}</span></b>
+    <br>
+    <br>
+    <form method='POST'>
+        {{form.hidden_tag()}}
+        <div class="container">
+            <label for="uname"><b>{{form.userlogin_name.label}}</b></label> &nbsp; {{form.userlogin_name()}}
+        </div>
+        <br>
+        <div class="container">
+            <label for="uname"><b>{{form.userlogin_pass.label}}</b></label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{form.userlogin_pass()}}
+        </div>
+
+        <br> {{form.submit()}}
+    </form>
+    <h6>Not a member ? Do
+        <a href="/signup" style="color:brown"> Register </a></h6>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block contents %}
+<br>
+<form method='post' action="/verifyemail">
+    <div class="container">
+        {%for i in emails%}
+        <p>{i}</p>
+        {%endfor%}
+        <input type=text name="topic" value="{{topic}}" hidden>
+        <b> <p>{{topic}}
+            <p></b>
+        <input type=text name="filename" value="{{Filename}}" hidden>
+        <b><p>{{Filename}}</p></b>
+        <b><p>Before clicking on verify, go and check your mails for the subscription confirmation, confirm subscription and come back to this page --> click on verify, download link automatically send to the email...</p></b>
+        <input type=submit value='verified' name="verify">
+</form>
+</div>
+<br>
+<br> {% endblock %}

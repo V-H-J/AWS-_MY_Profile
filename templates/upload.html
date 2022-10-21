@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block contents %}
+
+<br>
+<h2>
+    <div class=name style="color:brown; text-align: center"> Emails & File Upload Page</div>
+</h2>
+<br>
+<div class="card" style="width:900px; margin:auto">
+    <div class="card-body ">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+
+            <h4>Insert multiple email addresses separated by coma</h4>
+            <input type="email" name="variable" placeholder="Enter multiple emails...." size="100" multiple>
+
+            <p class="card-text">Choose a file to upload it to AWS S3</p>
+            <input type="file" name="file" value="file">
+            <hr>
+            <input type="submit" name="upload" value="Upload" class="btn btn-success"> &nbsp; <b><span style="color:brown ">{{message}}</span></b>
+        </form>
+
+    </div>
+</div>
+<br> {% endblock %}

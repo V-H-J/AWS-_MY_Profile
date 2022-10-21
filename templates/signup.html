@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block contents %}
+
+<div style="text-align:center">
+    <br>
+    <p>{{message}}</p>
+    <h4>Below Fill the details to get registered and sign in!</h4>
+    <br>
+    <form method='POST' style="margin: auto; width: 300px;">
+        <table>
+            <tr>{{form.hidden_tag()}}
+                <td><b> {{form.userfirstname.label}}</b></td>
+                <td> {{form.userfirstname()}}</td>
+            </tr>
+            <tr>
+                <td><b>{{form.userlastname.label}}</b></td>
+                <td>{{form.userlastname()}}</td>
+            </tr>
+            <tr>
+                <td><b>{{form.useremail.label}}</b></td>
+                <td>{{form.useremail()}}</td>
+            </tr>
+
+            <tr>
+                <td><b>{{form.password1.label}}</b></td>
+                <td>{{form.password1()}}</td>
+            </tr>
+        </table>
+        &nbsp; &nbsp;{{form.register()}}
+    </form>
+
+</div>
+{% endblock %}
